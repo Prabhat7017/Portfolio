@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website - Prabhat Kumar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,8 +19,16 @@
       <div class="container">
         <div class="navbar">
           <div class="logo-container">
-            <img src="./images/userAsset/NavLogo2.jpg" class="logo" />
-            <div class="logo-text">rabhat Kumar</div>
+            <img
+              src="./images/userAsset/NavLogo2.jpg"
+              class="logo"
+              alt="Navbar Logo"
+            />
+            <h1 class="logo-text">rabhat Kumar</h1>
+          </div>
+
+          <div class="menu-icon">
+            <div class="menu-icon">&#9776;</div>
           </div>
 
           <div class="nav-items">
@@ -371,7 +387,6 @@
           <img src="./images/stack/Vercel.svg" alt="" class="skills-logo" />
           <img src="./images/stack/Sql.webp" alt="" class="skills-logo" />
           <img src="./images/stack/DB.webp" alt="" class="skills-logo" />
-    
         </div>
       </div>
       <div class="contactus-form-container" id="contactme">
@@ -593,6 +608,38 @@
         typeSpeed: 100,
         backSpeed: 80,
         backDelay: 1000,
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuIcon = document.querySelector(".menu-icon");
+        const navItems = document.querySelector(".nav-items");
+
+        // Toggle dropdown menu on menu icon click
+        menuIcon.addEventListener("click", (event) => {
+          event.stopPropagation(); // Prevent click from propagating to the document
+          navItems.classList.toggle("active");
+        });
+
+        // Close dropdown menu on clicking anywhere outside
+        document.addEventListener("click", () => {
+          if (navItems.classList.contains("active")) {
+            navItems.classList.remove("active");
+          }
+        });
+
+        // Close dropdown menu on scroll
+        document
+          .getElementById("wrapper")
+          .addEventListener("scroll", function () {
+            if (navItems.classList.contains("active")) {
+              navItems.classList.remove("active");
+            }
+          });
+        // Prevent clicks inside the navItems from closing the dropdown
+        navItems.addEventListener("click", (event) => {
+          event.stopPropagation();
+        });
       });
     </script>
   </body>
