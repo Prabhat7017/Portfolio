@@ -99,7 +99,7 @@ html, body {
     margin-top: 0.9rem; /* Reduce top margin */
   }
   .nav-items {
-    display: flex; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: absolute; /* Positioning dropdown relative to navbar */
     top: 5rem; /* Place below the menu icon */
     right: 1rem;
