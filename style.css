@@ -363,7 +363,7 @@ a {
   }
 
   .faded-text {
-    font-size: 2.7rem; /* Reduce the faded text size */
+    font-size: 2.5rem; /* Reduce the faded text size */
     bottom: 0%;
     left: 15%;
     z-index: 100;
@@ -423,7 +423,7 @@ a {
   /* Adjust the icon positions */
   .icon-dots {
     bottom: 3rem;
-    right: 20%;
+    right: 25%;
   }
 
   .icon-cube {
